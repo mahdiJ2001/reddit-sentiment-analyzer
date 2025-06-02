@@ -3,6 +3,11 @@ from app.models.post import Post
 from app.schemas.post_schema import PostCreate
 
 def create_post(db: Session, post: PostCreate):
+    existing_post = db.query(Post).filter(Post.reddit_id == post.reddit_id).first()
+    if existing_post:
+        print(f"Post with reddit_id {post.reddit_id} already exists. Skipping.")
+        return existing_post
+
     db_post = Post(**post.dict())
     db.add(db_post)
     db.commit()

@@ -2,6 +2,7 @@ from pydantic import BaseModel
 from datetime import datetime
 
 class PostBase(BaseModel):
+    reddit_id: str
     ticker: str
     title: str
     body: str
@@ -19,3 +20,4 @@ class PostOut(PostBase):
 
     class Config:
         orm_mode = True
+
