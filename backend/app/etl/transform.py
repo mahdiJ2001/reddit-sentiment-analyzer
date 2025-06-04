@@ -1,6 +1,6 @@
 # app/etl/transform.py
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from app.schemas.post_schema import PostCreate
 
 ALLOWED_FLAIRS = {
@@ -57,7 +57,7 @@ def transform_submission(submission) -> PostCreate | None:
         body=body,
         sentiment="neutral",
         confidence=0.0,
-        created_at=datetime.utcfromtimestamp(submission.created_utc),
+        created_at = datetime.fromtimestamp(submission.created_utc, tz=timezone.utc),
         score=submission.score,
         author=submission.author.name if submission.author else "unknown"
     )

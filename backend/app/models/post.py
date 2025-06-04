@@ -6,7 +6,7 @@ class Post(Base):
     __tablename__ = "posts"
 
     id = Column(Integer, primary_key=True, index=True)
-    reddit_id = Column(String, unique=True, index=True)  # Add this
+    reddit_id = Column(String, unique=True, index=True)  
     ticker = Column(String, index=True)
     title = Column(Text)
     body = Column(Text)
