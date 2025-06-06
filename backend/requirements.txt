@@ -3,12 +3,6 @@ uvicorn
 sqlalchemy
 psycopg2-binary
 pydantic
-transformers
-scikit-learn
 praw
-tweepy
-spacy
-nltk
-torch
 python-dotenv
-recharts
+sqlalchemy-utils
