@@ -63,7 +63,7 @@ The system collects daily Reddit posts about stock tickers, analyzes their senti
 
 | Dashboard Views | |
 |------------------|------------------|
-| ![Dashboard 0](dashboard0.png) | ![Dashboard 1](dashboard1.png) |
+| ![Dashboard 0](Dashboard0.png) | ![Dashboard 1](Dashboard1.png) |
 
 ### 🏗️ Architecture Diagram  
 ![Architecture](architecture.png)
